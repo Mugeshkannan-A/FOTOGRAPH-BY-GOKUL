@@ -1,211 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography</title>
-    <link rel="icon" href="image/official.jpeg">
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography</title>
+  <link rel="icon" href="image/official.jpeg" />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
-<div class="header">
-<nav>
-  <div class="logo-container">
-    <img src="image/official.jpeg" alt="Logo" class="logo-icon" />
-    <h1>FOTOGRAPH BY GOKUL</h1>
-  </div>
+  <header class="header">
+    <nav>
+      <div class="logo-container">
+        <img src="image/official.jpeg" alt="Logo" class="logo-icon" />
+        <h1>FOTOGRAPH BY GOKUL</h1>
+      </div>
 
-  <div class="log">
-    <ul class="auth-links">
-      <li><a href="Login.html" target="_blank">Login</a></li>|
-      <li><a href="Signup.html" target="_blank">Signup</a></li>
-    </ul>
-  </div>
+      <div class="log">
+        <ul class="auth-links">
+          <li><a href="Login.html" target="_blank">Login</a></li>|
+          <li><a href="Signup.html" target="_blank">Signup</a></li>
+        </ul>
+      </div>
 
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#top">Home</a>|</li>
-      <li><a href="#courses">Course</a>|</li>
-      <li><a href="#about">About</a>|</li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#top">Home</a>|</li>
+          <li><a href="#courses">Course</a>|</li>
+          <li><a href="#about">About</a>|</li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-    <div class="menu-icon" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div id="courseModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="toggleMenu()">&times;</span>
+        <h2>Select a Course Location</h2>
+        <ul class="course-list">
+          <li><a href="#chennai" onclick="toggleMenu()">Chennai</a></li>
+          <li><a href="#hyderabad" onclick="toggleMenu()">Hyderabad</a></li>
+          <li><a href="#karur" onclick="toggleMenu()">Karur</a></li>
+          <li><a href="#madurai" onclick="toggleMenu()">Madurai</a></li>
+        </ul>
+      </div>
     </div>
+  </header>
+
+  <!-- Searchbar -->
+  <div class="Searchbar">
+    <input type="text" id="searchInput" placeholder="🔎 Search" />
+    <a href="https://www.instagram.com/fotograph_by_gokul" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=61557514042900" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
   </div>
-</nav>
 
-<div id="courseModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="toggleMenu()">&times;</span>
-    <h2>Select a Course Location</h2>
-    <ul class="course-list">
-      <li><a href="#chennai" onclick="toggleMenu()">Chennai</a></li>
-      <li><a href="#hyderabad" onclick="toggleMenu()">Hyderabad</a></li>
-      <li><a href="#karur" onclick="toggleMenu()">Karur</a></li>
-      <li><a href="#madurai" onclick="toggleMenu()">Madurai</a></li>
-    </ul>
-  </div>
-</div>
-
-<hr>
-</div>
-
-<div class="Searchbar">
-  <input type="text" id="searchInput" placeholder="🔎 Search">
-<a href="https://www.instagram.com/fotograph_by_gokul?igsh=bnFiZHE4d2o1OXdk" target="_blank" >
-    <i class="fab fa-instagram fa-2x " style="color: black;"></i>
-</a>
-<a href="https://www.facebook.com/profile.php?id=61557514042900" target="_blank">
-    <i class="fab fa-facebook fa-2x" style="color: black;"></i>
-</a>
-<a href="https://www.youtube.com/" target="_blank">
-    <i class="fab fa-youtube fa-2x" style="color: black;"></i>
-</a>
-
-</div>
-
+  <!-- Owner Section -->
 <div class="image-text-container">
-  <img src="image/owner.jpg" width="300" height="400" alt="Moment capture">
-  
+  <img src="image/owner.jpg" alt="Gokul holding camera" class="owner-img" />
   <p class="text-right">
-   ✨ About Gokul Thangaraj’s Vision
-With decades of hands-on experience behind the camera and in Photoshop, including recent work in fashion photography, I—Gokul Thangaraj—am excited to launch my own photography studio and academy in Hyderabad. My mission is to make photography and post-processing concepts approachable, drawing on my background in both wedding and fashion photography.
+    ✨ About Gokul Thangaraj’s Vision
 
-I believe that deep knowledge should be accessible. That's why I've created a learning environment where complex ideas are broken down into straightforward, digestible workflows.
+Gokul Thangaraj is a passionate photographer dedicated to capturing the beauty of life through his lens. With years of experience in portrait, wedding, and fashion photography, his vision is to inspire creativity and storytelling by blending technical skill with artistic expression. Gokul believes every moment has a unique story, and through his workshops and masterclasses, he empowers aspiring photographers to unlock their full potential and create timeless visual narratives.
 <br>
-At Gokul Thangaraj Photography Studio, enthusiasts and aspiring creatives can learn the art of capturing moments and polishing them using Photoshop. Courses will be available in both Tamil and English to accommodate diverse learners.
-
-My editing style emphasizes clarity and simplicity—ensuring each participant truly understands the craft they’re mastering. This initiative reflects my passion for sharing not only techniques but also life lessons learned in my years as a photographer.<br>
-
-Ultimately, I seek to inspire others just as I have been inspired. My hope is that upon completing the course at my Hyderabad studio, you’ll feel empowered and fulfilled. This journey is specially designed for photography enthusiasts, led by me—a dedicated wedding and fashion photographer.
-
-Join me at Gokul Thangaraj Photography Studio, where we’ll explore the beauty and precision of photography and Photoshop together—making the learning process both accessible and enjoyable.<br>
-My editing workflows are straightforward and aimed at delivering clear and concise concepts, ensuring participants understand the principles they’re working with. This workshop will be conducted in both Tamil and English to cater to a wider audience.
-
-Ultimately, I find inspiration in inspiring others, and I genuinely hope that you’ll find deep satisfaction upon completing the course at my Chandru Bharathy Photography Academy in Hyderabad. <br>The journey promises to be a fulfilling one, as I’ve always aspired to make life easier for others by extracting and sharing the essence of my extensive knowledge. This workshop is specially crafted for photography enthusiasts by a dedicated “Wedding and Fashion Photographer” based in Hyderabad. Join me at the Photography Academy, and together, we’ll explore the intricacies of photography and Photoshop, making these concepts more accessible and enjoyable for everyone.
+<br>
+Driven by a love for light and composition, Gokul Thangaraj captures more than just photos — he captures stories. His vision is to nurture artistic growth and technical mastery in his students. With a focus on personalized guidance, he transforms beginners into confident creators. Gokul’s workshops emphasize creativity, passion, and the power of perspective. He aims to leave a lasting impact through every frame he helps create.
+    <!-- Full paragraph -->
   </p>
 </div>
 
-<div id="courses" class="course">
-  <h1>Short term courses for creative professionals</h1>
-</div>
-<div class="All">
-<button><h2>All Courses</h2></button>
-</div>
-<br>
-<div class="box-container">
-  <div class="box" id="chennai">
-    <img src="image/course1.png" alt="Course Chennai">
-    <p>Mastering Portrait & Retouching <br>Workshop in | Chennai</p>
-  </div>
-  <div class="box" id="hyderabad">
-    <img src="image/course2.jpg" alt="Course Hyderabad">
-    <p>Mastering Portrait & Retouching <br>Workshop in | Hyderabad</p>
-  </div>
-  <div class="box" id="karur">
-    <img src="image/course3.png" alt="Course Karur">
-    <p>Mastering Portrait & Retouching <br>Workshop in | Karur</p>
-  </div>
-  <div class="box" id="madurai">
-    <img src="image/course4.jpg" alt="Course Madurai">
-    <p>Mastering Portrait & Retouching <br>Workshop in | Madurai</p>
-  </div>
-</div>
 
 
-<div id="about" class="about-section">
-  <div class="about-card">
-    <div class="about-text">
-      <p class="about-label"><i class="fas fa-circle"></i> FEATURED COURSE</p>
-      <h2>The Art of Wedding & Fashion Photography – Intensive Masterclass</h2>
-      <p>
-       Unleash your creative potential through a hands-on, immersive journey in wedding and fashion photography—designed and led by Gokul Thangaraj. This masterclass combines over a decade of real-world experience with a practical curriculum that makes high-level editing and shooting techniques easy to grasp.
-      </p>
-      <button class="know-more">Know More</button>
+  <!-- Courses Section -->
+  <section id="courses" class="course">
+    <h1>Short term courses for creative professionals</h1>
+  </section>
+  <div class="All">
+    <button><h2>All Courses</h2></button>
+  </div>
+
+  <section class="box-container">
+    <div class="box" id="chennai">
+      <img src="image/course1.png" alt="Chennai Workshop" />
+      <p>Mastering Portrait & Retouching <br>Workshop in Chennai</p>
     </div>
-    <div class="about-image">
-      <img src="image/owner1.jpeg" alt="Course Poster" />
+    <div class="box" id="hyderabad">
+      <img src="image/course2.jpg" alt="Hyderabad Workshop" />
+      <p>Mastering Portrait & Retouching <br>Workshop in Hyderabad</p>
     </div>
-  </div>
-</div>
-<hr>
-<footer id="contact" class="footer">
-  <div class="footer-section footer-left">
-    <img src="image/official.jpeg" alt="Logo" class="logo-icon" />
-    <h1>FOTOGRAPH BY GOKUL</h1>
-    <h3>"It’s only the first step that feels tough. <br> The rest will follow—just don’t quit."</h3>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/fotograph_by_gokul?igsh=bnFiZHE4d2o1OXdk" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61557514042900" target="_blank">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.youtube.com/" target="_blank">
-        <i class="fab fa-youtube"></i>
-      </a>
+    <div class="box" id="karur">
+      <img src="image/course3.png" alt="Karur Workshop" />
+      <p>Mastering Portrait & Retouching <br>Workshop in Karur</p>
     </div>
-  </div>
+    <div class="box" id="madurai">
+      <img src="image/course4.jpg" alt="Madurai Workshop" />
+      <p>Mastering Portrait & Retouching <br>Workshop in Madurai</p>
+    </div>
+  </section>
 
-  
-  <div class="footer-section footer-center">
-    <ul>
-      <li><a href="Home.html">Home</a></li>
-      <li><a href="Courses.html">Course</a></li>
-      <li><a href="About.html">About</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-  </div>
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-card">
+      <div class="about-text">
+        <p class="about-label"><i class="fas fa-circle"></i> FEATURED COURSE</p>
+        <h2>The Art of Wedding & Fashion Photography – Intensive Masterclass</h2>
+        <p>
+          Unleash your creative potential through a hands-on, immersive journey...
+        </p>
+        <button class="know-more">Know More</button>
+      </div>
+      <div class="about-image">
+        <img src="image/owner1.jpeg" alt="Masterclass Poster" />
+      </div>
+    </div>
+  </section>
 
- 
-  <div class="footer-section footer-right">
-    <p><strong>Email:</strong>gokulrioraj04@gmail.com</p>
-    <p><strong>Phone:</strong>+9173054 84299</p>
-    <p><strong>Location:</strong> Chennai, India</p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-section footer-left">
+      <img src="image/official.jpeg" alt="Logo" class="logo-icon" />
+      <h1>FOTOGRAPH BY GOKUL</h1>
+      <h3>"It’s only the first step that feels tough. <br> The rest will follow—just don’t quit."</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/fotograph_by_gokul" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61557514042900" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
 
+    <div class="footer-section footer-center">
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#courses">Course</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
 
-<script>
-  document.getElementById("searchInput").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-      const input = event.target.value.toLowerCase().trim();
-      const targetId = {
-        "chennai": "chennai",
-        "hyderabad": "hyderabad",
-        "karur": "karur",
-        "madurai": "madurai"
-      }[input];
+    <div class="footer-section footer-right">
+      <p><strong>Email:</strong> gokulrioraj04@gmail.com</p>
+      <p><strong>Phone:</strong> +91 73054 84299</p>
+      <p><strong>Location:</strong> Chennai, India</p>
+    </div>
+  </footer>
 
-      if (targetId) {
-        document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
-      } else {
-        alert("Location not found. Try: Chennai, Hyderabad, Karur, or Madurai.");
+  <script>
+    document.getElementById("searchInput").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        const input = event.target.value.toLowerCase().trim();
+        const targetId = {
+          "chennai": "chennai",
+          "hyderabad": "hyderabad",
+          "karur": "karur",
+          "madurai": "madurai"
+        }[input];
+
+        if (targetId) {
+          document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+        } else {
+          alert("Location not found. Try: Chennai, Hyderabad, Karur, or Madurai.");
+        }
       }
+    });
+
+    function toggleMenu() {
+      const modal = document.getElementById("courseModal");
+      modal.style.display = (modal.style.display === "block") ? "none" : "block";
     }
-  });
-</script>
-<script>
-  function toggleMenu() {
-    const modal = document.getElementById("courseModal");
-    modal.style.display = (modal.style.display === "block") ? "none" : "block";
-  }
 
-
-  window.onclick = function(event) {
-    const modal = document.getElementById("courseModal");
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
-</script>
-
+    window.onclick = function (event) {
+      const modal = document.getElementById("courseModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>
